@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background-color: #f5f3f3;
+  padding: 10px;
+  padding-top: 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 12.5vh;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #f5f3f3;
+  -webkit-box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
+}
+
+nav #logo {
+  display: flexbox;
+}
+
+nav #logo p {
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #252525;
+  text-shadow: 2px 2px 2px #63a2dd, 4px 4px 2px #4e72e7, 6px 6px 2px #2b7efa;
+  float: left;
+}
+
+nav #logo img {
+  margin-left: 20px;
+  margin-top: 22.8px;
+}
+
+#modalBox {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background-color: #34950f;
+}
+
+#container {
+  background-color: #bdbdbd;
+  height: 83.8vh;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 13vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container section {
+  overflow: hidden;
+  height: 97%;
+  width: 33vw;
+  background-color: #f5f3f3;
+  border-radius: 7%;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+#container section header {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#container section header p {
+  font-weight: 500;
+  font-size: 63px;
+  letter-spacing: 1px;
+}
+
+#container section header button {
+  border-radius: 100%;
+  width: 50px;
+  margin-top: 7px;
+  height: 50px;
+  border: none;
+  background-color: #4CAF50;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: #f5f3f3;
+  -webkit-transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
+  text-decoration: none;
+}
+
+#container section header button p {
+  font-size: 45px;
+  background: -webkit-linear-gradient(#0047cc, #0044ff);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#container section header button:hover {
+  background-color: rgba(37, 37, 37, 0.1);
+}
+
+#container section header #Todo {
+  background: -webkit-linear-gradient(#0047cc, #6fa6e0);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#container section header #Doing {
+  background: -webkit-linear-gradient(#3d0bf1, #7b5de7);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#container section header #Done {
+  background: -webkit-linear-gradient(#00d4db, #9bcdd1);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#container section .separator {
+  width: 100%;
+  height: 1%;
+  background-color: #bdbdbd;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

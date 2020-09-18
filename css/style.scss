@@ -1,0 +1,146 @@
+$white: #f5f3f3;
+$black: #252525;
+$grey: #bdbdbd;
+$blue: #0047cc;
+$lessIntenseBlue:#6fa6e0;
+$purple: #3d0bf1;
+$lessIntensePurple:#7b5de7;
+$cyan: #00d4db;
+$lessIntenseCyan: #9bcdd1;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav{
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background-color: $white;
+  padding: 10px;
+  padding-top: 11px;
+  box-sizing: border-box;
+  height: 12.5vh;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: $white;
+  box-shadow: 0px 5px 31px -9px rgba(0,0,0,0.6);
+    #logo{
+        //display: block;
+        //margin-left: auto;
+        //width: 61.5%;
+        display: flexbox;
+       p{
+           font-weight: 700;
+           font-size: 80px;
+           letter-spacing: 4px;
+           margin-left: auto;
+           margin-right: auto;
+           color: $black;
+           text-shadow: 2px 2px 2px #63a2dd, 4px 4px 2px #4e72e7, 6px 6px 2px #2b7efa;
+           float: left;
+       }
+       img{
+           margin-left: 20px;
+           margin-top: 22.8px ;
+       }
+    }
+  
+}
+
+#modalBox{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+    background-color: #34950f;
+}
+
+#container{
+   background-color: $grey; 
+   height: 83.8vh;
+   padding: 15px;
+   display: flex;
+   margin-top: 13vh;
+   font-family: 'Roboto', sans-serif;
+    section{
+        overflow: hidden;
+        height: 97%;
+        width: 33vw;
+        background-color: #f5f3f3;
+        border-radius: 7%;
+        margin: 10px;
+        box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.5);
+        box-sizing: border-box;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 10px;
+        header{
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-weight: 500;
+                font-size: 63px;
+                letter-spacing: 1px;
+            }
+            button{
+                border-radius: 100%;
+                width: 50px;
+                margin-top: 7px;
+                height: 50px;
+                border: none;
+                background-color: #4CAF50;
+                outline: none;
+                cursor: pointer;
+                margin-left: 10px;
+                background-color: $white;
+                transition: background-color ease-in-out 0.2s;
+                text-decoration: none;
+
+                p{
+                    font-size: 45px;
+                    background: -webkit-linear-gradient( $blue, #0044ff );
+                    background-clip: border-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            button:hover{
+                background-color: rgba($color: $black, $alpha: 0.1);
+            }
+        
+            #Todo{
+                background: -webkit-linear-gradient( $blue, $lessIntenseBlue );
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            #Doing{
+                background: -webkit-linear-gradient( $purple, $lessIntensePurple );
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;            
+            }
+            #Done{
+                background: -webkit-linear-gradient( $cyan, $lessIntenseCyan );
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;  
+            }
+        }
+        .separator{
+            width: 100%;
+            height: 1%;
+            background-color: $grey;
+            border-radius: 10px;
+        }
+    }
+}
