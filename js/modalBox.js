@@ -1,12 +1,12 @@
 document.getElementById("createTask").addEventListener("click", openModal);
 document.getElementById("closeModalTaskBox").addEventListener("click", closeModal);
+
 function openModal() {
 	document.getElementById("modalBox").style.display = "block";
-	document.getElementById("body").style.filter = "brightness(50%)";
-    console.log("works");
+	document.getElementById("container").style.filter = "brightness(50%)";
 }
 function closeModal(){
 	document.getElementById("modalBox").style.display = "none";
-	document.getElementsById("body").style.filter = "brightness(1)";
+	document.getElementsById("container").style.filter = "brightness(100%)";
     console.log("also works");
 }
