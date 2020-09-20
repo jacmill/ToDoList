@@ -168,4 +168,12 @@ nav #logo img {
   background-color: #bdbdbd;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  #container {
+    -webkit-box-flex: 30%;
+        -ms-flex: 30%;
+            flex: 30%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
