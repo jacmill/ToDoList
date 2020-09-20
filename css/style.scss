@@ -55,12 +55,16 @@ nav{
 }
 
 #modalBox{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; 
+    position: absolute;
     z-index: 1;
-    height: 100px;
-    width: 100px;
-    background-color: #34950f;
+    height: 500px;
+    width: 600px;
+    padding: 30px;
+    background-color: $white;
+    border-radius: 7%;
+    top: 25%;
+    left: 34.5vw;
 }
 
 #container{
