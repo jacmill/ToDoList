@@ -17,7 +17,7 @@ nav {
   padding-top: 11px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 12.5vh;
+  height: 13vh;
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
   background-color: #f5f3f3;
@@ -31,7 +31,7 @@ nav #logo {
 
 nav #logo p {
   font-weight: 700;
-  font-size: 80px;
+  font-size: 9.5vh;
   letter-spacing: 4px;
   margin-left: auto;
   margin-right: auto;
@@ -41,8 +41,8 @@ nav #logo p {
 }
 
 nav #logo img {
-  margin-left: 20px;
-  margin-top: 22.8px;
+  margin-left: 1vw;
+  margin-top: 1.75%;
 }
 
 #modalBox {
@@ -56,6 +56,13 @@ nav #logo img {
   border-radius: 7%;
   top: 25%;
   left: 34.5vw;
+}
+
+#modalBox h1 {
+  font-family: 'Robot', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration-thickness: 30px;
 }
 
 #container {
