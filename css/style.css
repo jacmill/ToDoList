@@ -23,26 +23,80 @@ nav {
   background-color: #f5f3f3;
   -webkit-box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 nav #logo {
-  display: flexbox;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 30px;
+  height: 100%;
+  width: 50%;
+  position: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 nav #logo p {
   font-weight: 700;
   font-size: 9.5vh;
   letter-spacing: 4px;
-  margin-left: auto;
-  margin-right: auto;
   color: #252525;
   text-shadow: 2px 2px 2px #63a2dd, 4px 4px 2px #4e72e7, 6px 6px 2px #2b7efa;
   float: left;
 }
 
 nav #logo img {
-  margin-left: 1vw;
-  margin-top: 1.75%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 30px;
+  margin-left: 13px;
+}
+
+nav #buttons {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px;
+}
+
+nav #buttons #createTask {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 15px;
+  height: 80px;
+  width: 150px;
+  cursor: pointer;
+  background-image: linear-gradient(150deg, #006bf6 14%, #0099ff 76%);
 }
 
 #modalBox {
@@ -65,20 +119,25 @@ nav #logo img {
   text-decoration-thickness: 30px;
 }
 
-#container {
+main {
+  min-height: 100%;
   background-color: #bdbdbd;
-  height: 83.8vh;
+  background-size: cover;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 13vh;
   font-family: 'Roboto', sans-serif;
 }
 
-#container section {
+main section {
   overflow: hidden;
-  height: 97%;
+  height: 802px;
   width: 33vw;
   background-color: #f5f3f3;
   border-radius: 7%;
@@ -89,11 +148,11 @@ nav #logo img {
           box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-#container section header {
+main section header {
   font-family: 'Ubuntu', sans-serif;
   margin-bottom: 5px;
   display: -webkit-box;
@@ -107,73 +166,53 @@ nav #logo img {
           justify-content: center;
 }
 
-#container section header p {
-  font-weight: 500;
-  font-size: 63px;
-  letter-spacing: 1px;
-}
-
-#container section header button {
-  border-radius: 100%;
-  width: 50px;
-  margin-top: 7px;
-  height: 50px;
-  border: none;
-  background-color: #4CAF50;
-  outline: none;
-  cursor: pointer;
-  margin-left: 10px;
-  background-color: #f5f3f3;
-  -webkit-transition: background-color ease-in-out 0.2s;
-  transition: background-color ease-in-out 0.2s;
-  text-decoration: none;
-}
-
-#container section header button p {
-  font-size: 45px;
+main section header p {
+  font-size: 70px;
   background: -webkit-linear-gradient(#0047cc, #0044ff);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#container section header button:hover {
+main section button:hover {
   background-color: rgba(37, 37, 37, 0.1);
 }
 
-#container section header #Todo {
+main section #Todo {
   background: -webkit-linear-gradient(#0047cc, #6fa6e0);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#container section header #Doing {
+main section #Doing {
   background: -webkit-linear-gradient(#3d0bf1, #7b5de7);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#container section header #Done {
+main section #Done {
   background: -webkit-linear-gradient(#00d4db, #9bcdd1);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#container section .separator {
+main .separator {
   width: 100%;
   height: 1%;
   background-color: #bdbdbd;
   border-radius: 10px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   #container {
-    -webkit-box-flex: 30%;
-        -ms-flex: 30%;
-            flex: 30%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=style.css.map */
