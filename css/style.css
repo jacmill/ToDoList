@@ -19,7 +19,7 @@ nav {
           box-sizing: border-box;
   height: 13vh;
   width: 100%;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   background-color: #f5f3f3;
   -webkit-box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 5px 31px -9px rgba(0, 0, 0, 0.6);
@@ -97,10 +97,19 @@ nav #buttons #createTask {
   width: 150px;
   cursor: pointer;
   background-image: linear-gradient(150deg, #006bf6 14%, #0099ff 76%);
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+nav #buttons #createTask:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 #modalBox {
-  display: none;
+  visibility: hidden;
   position: absolute;
   z-index: 1;
   height: 500px;
@@ -112,11 +121,87 @@ nav #buttons #createTask {
   left: 630px;
 }
 
-#modalBox h1 {
-  font-family: 'Robot', sans-serif;
+#modalBox header h1 {
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 50px;
   text-decoration-thickness: 30px;
+  color: #252525;
+}
+
+#modalBox header .close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+
+#modalBox header .close:hover {
+  opacity: 1;
+}
+
+#modalBox header .close:before,
+#modalBox header .close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+#modalBox header .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#modalBox header .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#modalBox form {
+  margin: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+#modalBox form input#TaskName {
+  font-size: 25px;
+  padding: 10px;
+  width: 250px;
+  border-bottom: #969696 solid 2.5px;
+}
+
+#modalBox form textarea {
+  border-bottom: #969696 solid 2.5px;
+  border-top: #969696 solid 2.5px;
+  font-size: 25px;
+  width: 400px;
+  padding: 10px;
+  resize: none;
+}
+
+#modalBox form input#SubmitButton {
+  background-image: linear-gradient(150deg, #006bf6 14%, #0099ff 76%);
+  padding: 7px;
+  font-size: 25px;
+  border-radius: 10px;
+  color: white;
+  width: 115px;
+  height: 50px;
+  font-weight: 600;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+#modalBox form input#SubmitButton:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 main {
@@ -132,7 +217,7 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 13vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main section {
@@ -153,7 +238,7 @@ main section {
 }
 
 main section header {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,15 +289,5 @@ main .separator {
   height: 1%;
   background-color: #bdbdbd;
   border-radius: 10px;
-}
-
-@media screen and (max-width: 500px) {
-  #container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    overflow-y: scroll;
-  }
 }
 /*# sourceMappingURL=style.css.map */

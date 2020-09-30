@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta http-equiv="refresh" content="30" />
     <link rel="stylesheet" href="css\style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
@@ -32,9 +31,17 @@
     <div id="modalBox">
       <header>
         <h1>Task Configuration</h1>
-        <span id="closeModalTaskBox">X</span>
+        <span id="closeModalTaskBox"><a href="#" class="close"></a></span>
       </header>
-      <form action=""></form>
+      <form action="">
+        <input type="text" id="TaskName" placeholder="Name">
+        <br>
+        <br>
+        <textarea name="desc" id="Description" cols="30" rows="8" placeholder="Description here"></textarea>
+        <br>
+        <br>
+        <input type="button" id="SubmitButton" value="Submit">                
+      </form>
     </div>
     <!-- Container for task completion sections -->
     <main id="main">
