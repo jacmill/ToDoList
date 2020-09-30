@@ -193,6 +193,7 @@ nav #buttons #createTask:hover {
   height: 50px;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
   -webkit-transition: -webkit-transform 0.1s linear;
   transition: -webkit-transform 0.1s linear;
   transition: transform 0.1s linear;
