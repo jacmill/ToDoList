@@ -14,7 +14,7 @@
     />
     <link rel="shortcut icon" href="images/logo.svg" type="image" />
     <script type="text/javascript" src="js/modalBox.js" async></script>
-    <script type="text/javascript" src="js/form.js" async></script>
+    <script type="text/javascript" src="js/createTask.js" async></script>
     <title>To-Do</title>
   </head>
   <body>
@@ -41,7 +41,7 @@
         <textarea id="Description" cols="30" rows="8" placeholder="Description here"></textarea>
         <br>
         <br>
-        <input type="button" id="SubmitButton" value="Submit" onclick="process();">                
+        <input type="button" id="SubmitButton" value="Submit">                
       </form>
     </div>
     <!-- Container for task completion sections -->
@@ -64,6 +64,9 @@
           <p id="Done">Done</p>
         </header>
         <div class="separator"></div>
+        <div id="TodoContainer">
+
+        </div>
       </section>
     </main>
   </body>
