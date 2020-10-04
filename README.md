@@ -8,4 +8,6 @@ This is my trello/todolist kind of thing. Work in progress.
 - [x] Draging to different levels of completion
 - [ ] Dark mode
 - [ ] Mobile Devices
+- [ ] Local Storage
+
 
