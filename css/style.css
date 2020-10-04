@@ -284,6 +284,12 @@ main section .taskList {
   overflow: scroll;
 }
 
+main section .taskList .shrink {
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  opacity: 0;
+}
+
 main section .taskList .todoTask {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -306,6 +312,8 @@ main section .taskList .todoTask {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 main section .taskList .todoTask .todoTextCont {
@@ -324,9 +332,10 @@ main section .taskList .todoTask .todoTextCont .todoDesc {
   word-wrap: break-word;
 }
 
-main section .taskList .todoTask .trash-btn, main section .taskList .todoTask .complete-btn {
-  width: 20%;
-  height: 45%;
+main section .taskList .todoTask .trash-btn,
+main section .taskList .todoTask .complete-btn {
+  width: 85px;
+  height: 65px;
   border: none;
   cursor: pointer;
   font-size: 25px;
@@ -335,17 +344,18 @@ main section .taskList .todoTask .trash-btn, main section .taskList .todoTask .c
 
 main section .taskList .todoTask .complete-btn {
   margin-right: 5px;
-  background-image: linear-gradient(150deg, #13df00 14%, #00a03d 76%);
+  background-image: linear-gradient(150deg, #36be00, #00f10c);
   border-radius: 30%;
 }
 
 main section .taskList .todoTask .trash-btn {
   margin-left: 5px;
-  background-image: linear-gradient(150deg, #006bf6 14%, #0099ff 76%);
+  background-image: linear-gradient(150deg, #f60000 14%, #fd4e4e 76%);
   border-radius: 30%;
 }
 
-main section .taskList .todoTask .fa-trash, main section .taskList .todoTask .fa-check {
+main section .taskList .todoTask .fa-trash,
+main section .taskList .todoTask .fa-check {
   pointer-events: none;
 }
 
@@ -370,21 +380,25 @@ section#Done header p {
   -webkit-text-fill-color: transparent;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 100%;
-  }
+@-webkit-keyframes shrink {
   100% {
-    opacity: 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 100%;
-  }
+@keyframes shrink {
   100% {
-    opacity: 0%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

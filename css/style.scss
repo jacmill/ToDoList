@@ -230,6 +230,11 @@ main {
       height: 100%;
       box-sizing: border-box;
       overflow: scroll;
+
+      .shrink {
+        transform: translateY(1rem);
+        opacity: 0;
+      }
       .todoTask {
         box-sizing: border-box;
         margin-top: 10px;
@@ -244,6 +249,7 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
+        transition: all 0.5s ease;
         .todoTextCont {
           height: 100%;
           width: 90%;
@@ -257,33 +263,32 @@ main {
             word-wrap: break-word;
           }
         }
-        .trash-btn, .complete-btn{
-          width: 20%;
-          height: 45%;
+        .trash-btn,
+        .complete-btn {
+          width: 85px;
+          height: 65px;
           border: none;
           cursor: pointer;
           font-size: 25px;
           color: rgb(253, 253, 253);
         }
-        .complete-btn{
+        .complete-btn {
           margin-right: 5px;
-          background-image: linear-gradient(
-            150deg,
-            rgb(19, 223, 0) 14%,
-            rgb(0, 160, 61) 76%
-          );
+          background-image: linear-gradient(150deg, #36be00, #00f10c);
           border-radius: 30%;
         }
-        .trash-btn{
+        .trash-btn {
           margin-left: 5px;
           background-image: linear-gradient(
             150deg,
-            rgb(0, 107, 246) 14%,
-            rgb(0, 153, 255) 76%
+            rgb(246, 0, 0) 14%,
+            rgb(253, 78, 78) 76%
           );
           border-radius: 30%;
         }
-        .fa-trash, .fa-check{
+
+        .fa-trash,
+        .fa-check {
           pointer-events: none;
         }
       }
@@ -321,11 +326,11 @@ section#Done {
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 100%;
-  }
+@keyframes shrink {
   100% {
-    opacity: 0%;
+    transform: scale(1);
+  }
+  0% {
+    transform: scale(0);
   }
 }
