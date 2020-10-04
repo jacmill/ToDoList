@@ -56,6 +56,6 @@ function deleteCheck(e){
   //Move Task to another section
   if(button.classList[0] == "complete-btn"){
     const parent = button.parentElement;
-    todoList[1].appendChild(document.querySelector(".todoTask"));
+    
   }
 }
