@@ -1,55 +1,61 @@
-var taskTitle;
-var taskDesc;
-var todoCont = document.getElementById("TodoContainer");
-var taskNodeList = document.getElementsByClassName("Task");
+const todoInput = document.querySelectorAll(".todoInput");
+const todoList = document.querySelectorAll(".taskList");
 document.getElementById("SubmitButton").addEventListener("click", createTask);
 
+for(var i = 0; i < todoList.length; i++){
+  todoList[i].addEventListener("click", deleteCheck);
+}
+
 function createTask() {
-  //set form values as variables
-  taskTitle = document.getElementById("TaskName").value;
-  taskDesc = document.getElementById("Description").value;
-  // Title of Task
-  var titleNode = document.createElement("h1");
-  titleNode.className = "Title";
-  // Description of Task
-  var descNode = document.createElement("p");
-  descNode.className = "Description";
-  // Close Button
-  var deleteButtonWrapper = document.createElement("span");
-  deleteButtonWrapper.className = "deleteButton";
-  var btnImg = document.createElement("img");
-  btnImg.className = "btnImg";
+  //Task div
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todoTask");
+  //Task text container
+  const todoTextCont = document.createElement("li");
+  todoTextCont.classList.add("todoTextCont");
+  //Task title
+  const todoTitle = document.createElement("h1");
+  todoTitle.classList.add("todoTitle");
+  todoTitle.innerText = todoInput[0].value;
+  todoTextCont.appendChild(todoTitle);
+  //Task description
+  const todoDescription = document.createElement("p");
+  todoDescription.classList.add("todoDesc");
+  todoDescription.innerText = todoInput[1].value;
+  todoTextCont.appendChild(todoDescription)
+  //Putting together text for task
+  todoDiv.appendChild(todoTextCont);
+  //Complete button
+  const completeButton = document.createElement("button");
+  completeButton.innerHTML = '<i class="fas fa-check"></i>';
+  completeButton.classList.add("complete-btn");
+  todoDiv.appendChild(completeButton);
+  //Delete button
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("trash-btn");
+  todoDiv.appendChild(trashButton);
 
-  btnImg.setAttribute("src", "../images/trashcan.svg");
-  deleteButtonWrapper.appendChild(btnImg);
-
-  descNode.appendChild(document.createTextNode(taskDesc));
-  titleNode.appendChild(document.createTextNode(taskTitle));
-
-  var task = document.createElement("div");
-  task.className = "Task";
-  var taskCont = document.createElement("div");
-  taskCont.className = "TaskContainer";
-
-  task.appendChild(taskCont);
-  taskCont.appendChild(titleNode);
-  taskCont.appendChild(descNode);
-  task.appendChild(deleteButtonWrapper);
-
-  if (taskTitle == "" || taskDesc == "") {
-    alert("You must write something");
-  } else {
-    todoCont.appendChild(task);
-  }
-
+  todoList[0].appendChild(todoDiv);
+  //Reseting modal box after creating task
+  todoInput[0].value = "";
+  todoInput[1].value = "";
   document.getElementById("modalBox").style.visibility = "hidden";
   document.getElementById("main").style.filter = "none";
-  document.getElementById("TaskName").value = "";
-  document.getElementById("Description").value = "";
 }
-var close = document.getElementsByClassName("deleteButton");
-for(var i = 0; i < close.length; i++){
-    close[i].onclick = function(){
-        todoCont.removeChild(taskNodeList[i]);
-    }
+
+function deleteCheck(e){
+  const button = e.target;
+
+  //Delete Task
+  if(button.classList[0] === "trash-btn"){
+    const parent = button.parentElement;
+    parent.remove();
+  }
+
+  //Move Task to another section
+  if(button.classList[0] == "complete-btn"){
+    const parent = button.parentElement;
+    todoList[1].appendChild(document.querySelector(".todoTask"));
+  }
 }

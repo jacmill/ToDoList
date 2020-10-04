@@ -218,22 +218,19 @@ main {
         -webkit-text-fill-color: transparent;
       }
     }
-    button:hover {
-      background-color: rgba($color: $black, $alpha: 0.1);
-    }
+
     .separator {
       width: 100%;
       height: 1%;
       background-color: $grey;
       border-radius: 10px;
     }
-    ul {
+    .taskList {
       margin: 0px;
       height: 100%;
       box-sizing: border-box;
       overflow: scroll;
-
-      .Task {
+      .todoTask {
         box-sizing: border-box;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -246,62 +243,84 @@ main {
         overflow-x: hidden;
         display: flex;
         flex-direction: row;
-        .TaskContainer {
-          width: 80%;
-          margin: 10px;
-          .Title {
+        align-items: center;
+        .todoTextCont {
+          height: 100%;
+          width: 90%;
+          margin-left: 10px;
+          margin-right: 10px;
+          .todoTitle {
             font-size: 40px;
             word-wrap: break-word;
           }
-          .Description {
+          .todoDesc {
             word-wrap: break-word;
           }
         }
-        span {
-          box-sizing: border-box;
-          height: 100%;
-          flex: 1;
-          text-align: center;
-          padding-top: 45px;
+        .trash-btn, .complete-btn{
+          width: 20%;
+          height: 45%;
+          border: none;
           cursor: pointer;
-          img {
-            width: 45px;
-          }
+          font-size: 25px;
+          color: rgb(253, 253, 253);
         }
-      }
-    }
-  }
-  section#Todo {
-    header {
-      p {
-        background: -webkit-linear-gradient($blue, $lessIntenseBlue);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-  section#Doing {
-    header {
-      p {
-        background: -webkit-linear-gradient($cyan, $lessIntenseCyan);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-  section#Done {
-    header {
-      p {
-        background: -webkit-linear-gradient($purple, $lessIntensePurple);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        .complete-btn{
+          margin-right: 5px;
+          background-image: linear-gradient(
+            150deg,
+            rgb(19, 223, 0) 14%,
+            rgb(0, 160, 61) 76%
+          );
+          border-radius: 30%;
+        }
+        .trash-btn{
+          margin-left: 5px;
+          background-image: linear-gradient(
+            150deg,
+            rgb(0, 107, 246) 14%,
+            rgb(0, 153, 255) 76%
+          );
+          border-radius: 30%;
+        }
+        .fa-trash, .fa-check{
+          pointer-events: none;
+        }
       }
     }
   }
 }
+section#Todo {
+  header {
+    p {
+      background: -webkit-linear-gradient($blue, $lessIntenseBlue);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+section#Doing {
+  header {
+    p {
+      background: -webkit-linear-gradient($cyan, $lessIntenseCyan);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+section#Done {
+  header {
+    p {
+      background: -webkit-linear-gradient($purple, $lessIntensePurple);
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 100%;
