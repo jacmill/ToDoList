@@ -10,6 +10,7 @@ function createTask() {
   //Task div
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todoTask");
+  todoDiv.setAttribute("draggable", "true");
   //Task text container
   const todoTextCont = document.createElement("li");
   todoTextCont.classList.add("todoTextCont");
